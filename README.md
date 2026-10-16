@@ -180,7 +180,7 @@ only as a feature — the repository holds no GARCH benchmark score.
 
 ## Get Started
 
-**1. Install.** Python 3.11 (the version the project's bytecode was built with); no versions are pinned in
+**1. Install.** The project ran on Python 3.11. No package version is pinned anywhere in
 the repository, so `requirements.txt` lists the packages only.
 
 ```bash
