@@ -1,0 +1,16 @@
+# Packages the code and the notebooks actually import.
+# No version was pinned anywhere in this repository, so none is asserted here.
+# PyTorch: install the build matching your CUDA from https://pytorch.org
+
+torch
+numpy
+pandas
+scikit-learn
+scipy
+statsmodels
+matplotlib
+joblib
+arch
+yfinance
+requests
+jupyter

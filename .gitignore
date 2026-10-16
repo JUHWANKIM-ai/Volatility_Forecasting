@@ -1,2 +1,12 @@
+# IDE / OS
+/.idea/
+*Zone.Identifier
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# scratch folders kept out of the history
 /Waste/
 /Reference/

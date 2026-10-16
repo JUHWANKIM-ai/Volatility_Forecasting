@@ -1,6 +1,6 @@
 from glob import glob
-from Modules.run import Run
-from utils.parser import config
+from src.run import Run
+from src.parser import config
 from multiprocessing import set_start_method, Process
 
 import os
@@ -57,7 +57,7 @@ class Execution:
         if self.config['model'].Transfer:
             file_list = self.get_file_list()
         if not self.config['model'].Transfer:
-            file_list = ['Database/spot_std/SP_vol.csv']
+            file_list = ['data/spot_std/SP_vol.csv']
 
         for file in file_list:
             print('')
@@ -71,5 +71,5 @@ class Execution:
 
 
 if __name__ == "__main__":
-    E = Execution('Database/future_std', None)
+    E = Execution('data/future_std', None)
     E.main()

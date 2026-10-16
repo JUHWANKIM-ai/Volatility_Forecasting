@@ -4,7 +4,7 @@ import time
 import numpy as np
 import torch
 import pandas as pd
-from utils.Metrics import calculate_R2
+from src.metrics import calculate_R2
 
 
 class Train_Module:

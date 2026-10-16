@@ -1,5 +1,5 @@
 import argparse
-from Modules.model import *
+from src.model import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--input_size", type=int, default=2, help="input_size")
@@ -32,7 +32,7 @@ parser.add_argument("--use_wandb", type=bool, default=False, help="use_wandb")
 
 parser.add_argument("--backbone_val_end", type=str, default='2005-01-01', help="date")
 parser.add_argument("--transfer_test_end", type=str, default='2024-01-01', help="date")
-parser.add_argument("--backbone_weight_path", type=str, default='Weight/Backbone/BiLSTM_SP.pth', help="weight")
+parser.add_argument("--backbone_weight_path", type=str, default='weights/backbone/BiLSTM_SP.pth', help="weight")
 
 opt_train = parser.parse_args()
 print(opt_train)

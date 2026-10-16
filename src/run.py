@@ -1,11 +1,11 @@
 import matplotlib.pyplot as plt
-from utils.Metrics import *
-from Modules.train import *
+from src.metrics import *
+from src.train import *
 from torch.optim import Adam
-from utils.seed import seed_everything
+from src.seed import seed_everything
 from torch.utils.data import DataLoader
 from sklearn.model_selection import train_test_split
-from Modules.dataset import CustomDataset, TestDataset
+from src.dataset import CustomDataset, TestDataset
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 
 
@@ -27,12 +27,12 @@ class Run:
 
         # Backbone Model 여부에 따라 weight 저장 위치를 달리함.
         if self.config['model'].backbone1:
-            self.weight_path = f'Weight/Backbone/BiLSTM_{self.file_path[-10:-8]}.pth'
-            self.saving_path = f'Files/BiLSTM/additionalX_{self.file_path[-10:-8]}.csv'
+            self.weight_path = f'weights/backbone/BiLSTM_{self.file_path[-10:-8]}.pth'
+            self.saving_path = f'results/bilstm/additionalX_{self.file_path[-10:-8]}.csv'
 
         if self.config['model'].backbone2:
-            self.weight_path = f'Weight/Backbone/MLP_{self.file_path[-10:-8]}.pth'
-            self.saving_path = f'Files/MLP/additionalX_{self.file_path[-10:-8]}.csv'
+            self.weight_path = f'weights/backbone/MLP_{self.file_path[-10:-8]}.pth'
+            self.saving_path = f'results/mlp/additionalX_{self.file_path[-10:-8]}.csv'
 
     def load_data(self, retraining):
         print('Loading data...')
